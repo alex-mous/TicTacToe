@@ -58,7 +58,7 @@ public class TicTacToe {
         } else {
             twoPlayerGameLoop(board, true);
         }
-        System.out.println("\n- - - - - - - - - Game over! - - - - - - - - -\n- - - - - - - - Player " + board.getWinner() + " won!- - - - - - - -");
+        System.out.println("\n- - - - - - - - - Game over! - - - - - - - - -\n- - - - - - - - Player " + board.getWinner() + " won!- - - - - - - - -");
     }
 
     public static boolean twoPlayerGameLoop(Board board, boolean turn) { //True for user, false for AI. Returns true if the X won, false if O won

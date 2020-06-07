@@ -56,7 +56,7 @@ public class Board implements Cloneable {
     }
 
     public boolean checkFinished() { //Return is the game is over or not
-        for (var i=0; i<rc*rc; i+=rc) { //Horizontal
+        for (int i=0; i<rc*rc; i+=rc) { //Horizontal
             if (squares[i] != null) {
                 winner = squares[i];
                 for (int j=i; j<i+rc; j++) {
@@ -71,7 +71,7 @@ public class Board implements Cloneable {
             }
         }
 
-        for (var i=0; i<rc; i+=1) { //Vertical
+        for (int i=0; i<rc; i+=1) { //Vertical
             if (squares[i] != null) {
                 winner = squares[i];
                 for (int j=i; j<rc*rc; j+=rc) {
@@ -88,7 +88,7 @@ public class Board implements Cloneable {
 
         if (squares[0] != null) { //Left-slanting diagonal
             winner = squares[0];
-            for (var i=0; i<rc*rc; i+=rc+1) {
+            for (int i=0; i<rc*rc; i+=rc+1) {
                 if (squares[i] == null || !squares[0].equals(squares[i])) {
                     winner = null;
                     break;
@@ -101,7 +101,7 @@ public class Board implements Cloneable {
 
         if (squares[rc-1] != null) { //Right-slanting diagonal
             winner = squares[rc-1];
-            for (var i=rc-1; i<rc*rc-1; i+=rc-1) {
+            for (int i=rc-1; i<rc*rc-1; i+=rc-1) {
                 if (squares[i] == null || !squares[rc-1].equals(squares[i])) {
                     winner = null;
                     break;
